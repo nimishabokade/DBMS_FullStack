@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account · Freelancer Hub</title>
+  <link rel="stylesheet" href="register.css" />
+</head>
+<body>
+
+  <!-- ============ ANIMATED BACKGROUND LAYERS (matches login.html) ============ -->
+  <div class="bg">
+    <div class="bg__grid"></div>
+    <div class="bg__glow bg__glow--primary"></div>
+    <div class="bg__glow bg__glow--secondary"></div>
+    <div class="bg__streak bg__streak--one"></div>
+    <div class="bg__streak bg__streak--two"></div>
+    <div class="bg__scanline"></div>
+
+    <div class="bg__particles">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="nav">
+    <div class="nav__logo">
+      <img class="nav__logo-mark" src="fh-icon.png" alt="Freelancer Hub" />
+      <span class="nav__logo-text">Freelancer Hub</span>
+    </div>
+
+    <div class="nav__actions">
+      <span class="nav__prompt">Already have an account?</span>
+      <a href="login.html" class="nav__cta">Sign In</a>
+    </div>
+  </header>
+
+  <!-- ============ MAIN REGISTRATION SECTION ============ -->
+  <main class="stage">
+    <div class="card card--wide">
+
+      <div class="card__ring" aria-hidden="true"></div>
+
+      <div class="card__header card__header--center">
+        <img class="card__brand" src="fh-icon.png" alt="Freelancer Hub" />
+        <h1 class="card__title">Create your Freelancer Hub account</h1>
+        <p class="card__subtitle">Find opportunities. Hire talent. Build something great.</p>
+      </div>
+
+      <!-- ======================================================
+           ACCOUNT TYPE SWITCH
+           Pure CSS, no JavaScript: two hidden radio inputs drive
+           which card looks "selected" and which field set/form is
+           visible, using the general sibling combinator (~).
+           ====================================================== -->
+      <div class="account-type">
+
+        <input type="radio" id="type-customer" name="accountType" class="type-radio" checked />
+        <input type="radio" id="type-freelancer" name="accountType" class="type-radio" />
+
+        <div class="type-cards">
+
+          <label for="type-customer" class="type-card type-card--customer">
+            <span class="type-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="10" cy="10" r="6"></circle>
+                <line x1="15" y1="15" x2="20.5" y2="20.5"></line>
+              </svg>
+            </span>
+            <span class="type-card__title">Customer</span>
+            <span class="type-card__desc">I want to find and hire freelancers</span>
+          </label>
+
+          <label for="type-freelancer" class="type-card type-card--freelancer">
+            <span class="type-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="8 6 3 12 8 18"></polyline>
+                <polyline points="16 6 21 12 16 18"></polyline>
+              </svg>
+            </span>
+            <span class="type-card__title">Freelancer</span>
+            <span class="type-card__desc">I want to offer my skills and find projects</span>
+          </label>
+
+        </div>
+
+        <!-- ============ CUSTOMER FORM ============ -->
+        <form class="fields fields--customer" action="#" method="post">
+          <div class="field-grid">
+
+            <div class="field">
+              <label for="cust-name">Full Name</label>
+              <input type="text" id="cust-name" name="fullName" placeholder="Enter your full name" autocomplete="name" />
+            </div>
+
+            <div class="field">
+              <label for="cust-email">Email Address</label>
+              <input type="email" id="cust-email" name="email" placeholder="Enter your email" autocomplete="email" />
+            </div>
+
+            <div class="field">
+              <label for="cust-phone">Phone Number</label>
+              <input type="tel" id="cust-phone" name="phone" placeholder="Enter your phone number" autocomplete="tel" />
+            </div>
+
+            <div class="field">
+              <label for="cust-password">Password</label>
+              <div class="input-wrap">
+                <input type="password" id="cust-password" name="password" placeholder="Create a password" autocomplete="new-password" />
+                <!-- JS hook (to be wired later): toggle input type + icon -->
+                <button type="button" class="input-icon-btn" tabindex="-1" aria-label="Show password">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1.5 12s4-7.5 10.5-7.5S22.5 12 22.5 12s-4 7.5-10.5 7.5S1.5 12 1.5 12z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="field field--full">
+              <label for="cust-confirm">Confirm Password</label>
+              <div class="input-wrap">
+                <input type="password" id="cust-confirm" name="confirmPassword" placeholder="Re-enter your password" autocomplete="new-password" />
+                <button type="button" class="input-icon-btn" tabindex="-1" aria-label="Show password">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1.5 12s4-7.5 10.5-7.5S22.5 12 22.5 12s-4 7.5-10.5 7.5S1.5 12 1.5 12z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <button type="submit" class="btn-primary">
+            <span>Create Customer Account</span>
+          </button>
+        </form>
+
+        <!-- ============ FREELANCER FORM ============ -->
+        <form class="fields fields--freelancer" action="#" method="post">
+          <div class="field-grid">
+
+            <div class="field">
+              <label for="free-name">Full Name</label>
+              <input type="text" id="free-name" name="fullName" placeholder="Enter your full name" autocomplete="name" />
+            </div>
+
+            <div class="field">
+              <label for="free-email">Email Address</label>
+              <input type="email" id="free-email" name="email" placeholder="Enter your email" autocomplete="email" />
+            </div>
+
+            <div class="field">
+              <label for="free-phone">Phone Number</label>
+              <input type="tel" id="free-phone" name="phone" placeholder="Enter your phone number" autocomplete="tel" />
+            </div>
+
+            <div class="field">
+              <label for="free-password">Password</label>
+              <div class="input-wrap">
+                <input type="password" id="free-password" name="password" placeholder="Create a password" autocomplete="new-password" />
+                <button type="button" class="input-icon-btn" tabindex="-1" aria-label="Show password">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1.5 12s4-7.5 10.5-7.5S22.5 12 22.5 12s-4 7.5-10.5 7.5S1.5 12 1.5 12z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="free-confirm">Confirm Password</label>
+              <div class="input-wrap">
+                <input type="password" id="free-confirm" name="confirmPassword" placeholder="Re-enter your password" autocomplete="new-password" />
+                <button type="button" class="input-icon-btn" tabindex="-1" aria-label="Show password">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1.5 12s4-7.5 10.5-7.5S22.5 12 22.5 12s-4 7.5-10.5 7.5S1.5 12 1.5 12z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="free-title">Professional Title</label>
+              <input type="text" id="free-title" name="professionalTitle" placeholder="e.g. Full Stack Web Developer" />
+            </div>
+
+            <div class="field">
+              <label for="free-rate">Hourly Rate</label>
+              <div class="input-wrap input-wrap--rate">
+                <span class="input-affix">$</span>
+                <input type="number" id="free-rate" name="hourlyRate" placeholder="45" min="0" step="1" />
+                <span class="input-affix input-affix--suffix">/hr</span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="free-domain">Primary Domain</label>
+              <select id="free-domain" name="primaryDomain">
+                <option value="" disabled selected>Select your domain</option>
+                <option>Web Development</option>
+                <option>Mobile Development</option>
+                <option>UI/UX Design</option>
+                <option>Data Science</option>
+                <option>AI/ML</option>
+                <option>Cybersecurity</option>
+                <option>Cloud Computing</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="field field--full">
+              <label>Skills</label>
+              <div class="skills-grid">
+
+                <input type="checkbox" id="skill-html" name="skills" value="HTML" class="skill-check" />
+                <label for="skill-html" class="skill-chip">HTML</label>
+
+                <input type="checkbox" id="skill-css" name="skills" value="CSS" class="skill-check" />
+                <label for="skill-css" class="skill-chip">CSS</label>
+
+                <input type="checkbox" id="skill-js" name="skills" value="JavaScript" class="skill-check" />
+                <label for="skill-js" class="skill-chip">JavaScript</label>
+
+                <input type="checkbox" id="skill-ts" name="skills" value="TypeScript" class="skill-check" />
+                <label for="skill-ts" class="skill-chip">TypeScript</label>
+
+                <input type="checkbox" id="skill-react" name="skills" value="React" class="skill-check" />
+                <label for="skill-react" class="skill-chip">React</label>
+
+                <input type="checkbox" id="skill-node" name="skills" value="Node.js" class="skill-check" />
+                <label for="skill-node" class="skill-chip">Node.js</label>
+
+                <input type="checkbox" id="skill-python" name="skills" value="Python" class="skill-check" />
+                <label for="skill-python" class="skill-chip">Python</label>
+
+                <input type="checkbox" id="skill-uiux" name="skills" value="UI/UX Design" class="skill-check" />
+                <label for="skill-uiux" class="skill-chip">UI/UX Design</label>
+
+                <input type="checkbox" id="skill-figma" name="skills" value="Figma" class="skill-check" />
+                <label for="skill-figma" class="skill-chip">Figma</label>
+
+                <input type="checkbox" id="skill-sql" name="skills" value="SQL" class="skill-check" />
+                <label for="skill-sql" class="skill-chip">SQL</label>
+
+                <input type="checkbox" id="skill-aws" name="skills" value="AWS" class="skill-check" />
+                <label for="skill-aws" class="skill-chip">AWS</label>
+
+                <input type="checkbox" id="skill-data" name="skills" value="Data Analysis" class="skill-check" />
+                <label for="skill-data" class="skill-chip">Data Analysis</label>
+
+              </div>
+            </div>
+
+            <!-- Profile completion concept: static preview for now, ties into
+                 the future Freelancer Hub profile-completion feature. -->
+            <div class="field field--full">
+              <div class="profile-meter">
+                <div class="profile-meter__head">
+                  <span>Profile Completion</span>
+                  <span class="profile-meter__pct">60%</span>
+                </div>
+                <div class="profile-meter__track">
+                  <div class="profile-meter__fill"></div>
+                </div>
+                <p class="profile-meter__hint">Complete your profile to improve your visibility to customers.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <button type="submit" class="btn-primary">
+            <span>Create Freelancer Account</span>
+          </button>
+        </form>
+
+      </div>
+
+      <p class="card__terms">
+        By creating an account, you agree to our
+        <a href="#" class="link-muted-strong">Terms of Service</a> and
+        <a href="#" class="link-muted-strong">Privacy Policy</a>.
+      </p>
+
+      <p class="card__register">
+        Already have an account?
+        <a href="login.html" class="link-accent">Sign In</a>
+      </p>
+
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <p class="footer__left">© 2026 Freelancer Hub</p>
+    <div class="footer__right">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>
