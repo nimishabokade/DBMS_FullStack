@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Freelancer Dashboard · Freelancer Hub</title>
+  <link rel="stylesheet" href="freelancer-dashboard.css" />
+</head>
+<body>
+
+  <!-- ============ ANIMATED BACKGROUND LAYERS (matches login/register/customer-dashboard) ============ -->
+  <div class="bg">
+    <div class="bg__grid"></div>
+    <div class="bg__glow bg__glow--primary"></div>
+    <div class="bg__glow bg__glow--secondary"></div>
+    <div class="bg__streak bg__streak--one"></div>
+    <div class="bg__streak bg__streak--two"></div>
+    <div class="bg__scanline"></div>
+
+    <div class="bg__particles">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <!-- ============ TOP NAVIGATION (sticky) ============ -->
+  <header class="navbar">
+    <div class="navbar__logo">
+      <img class="navbar__logo-mark" src="fh-icon.png" alt="Freelancer Hub" />
+      <span class="navbar__logo-text">Freelancer Hub</span>
+    </div>
+
+    <nav class="navbar__links">
+      <a href="freelancer-dashboard.html" class="navbar__link is-active">Dashboard</a>
+      <a href="#" class="navbar__link">My Profile</a>
+      <a href="#portfolio" class="navbar__link">Portfolio</a>
+      <a href="messages.html" class="navbar__link">Messages</a>
+    </nav>
+
+    <div class="navbar__actions">
+      <a href="notifications.html" class="navbar__icon-btn" aria-label="Notifications">
+        <span aria-hidden="true">🔔</span>
+        <span class="navbar__badge">3</span>
+      </a>
+      <a href="#" class="navbar__icon-btn navbar__icon-btn--profile" aria-label="Profile">
+        <span aria-hidden="true">👤</span>
+        <span class="navbar__profile-label">Profile</span>
+      </a>
+      <a href="login.html" class="navbar__logout">Logout</a>
+    </div>
+  </header>
+
+  <main class="dashboard">
+
+    <!-- ============ WELCOME SECTION ============ -->
+    <section class="welcome">
+      <h1 class="welcome__title">Welcome back, [Freelancer Name] 👋</h1>
+      <p class="welcome__subtitle">Manage your profile, showcase your skills, and connect with potential customers.</p>
+    </section>
+
+    <!-- ============ STATUS ROW: Profile Completion + Availability + Visibility ============ -->
+    <section class="status-row">
+
+      <!-- Profile completion -->
+      <div class="status-card status-card--completion">
+        <h2 class="status-card__title">Profile Completion</h2>
+
+        <div class="completion-display">
+          <span class="completion-display__value">80%</span>
+        </div>
+
+        <div class="profile-meter">
+          <div class="profile-meter__track">
+            <div class="profile-meter__fill"></div>
+          </div>
+        </div>
+
+        <p class="status-card__hint">Complete your profile to improve your visibility to customers.</p>
+
+        <a href="#" class="btn-primary btn-block">Complete Profile</a>
+      </div>
+
+      <!-- Availability -->
+      <div class="status-card status-card--availability">
+        <h2 class="status-card__title">Your Availability</h2>
+
+        <div class="availability-display">
+          <span class="availability-dot" aria-hidden="true"></span>
+          <span class="availability-display__label">AVAILABLE</span>
+        </div>
+
+        <p class="status-card__hint">Customers can currently contact you.</p>
+        <p class="status-card__meta">Last updated: Today</p>
+
+        <a href="#" class="btn-secondary btn-block">Change Availability</a>
+      </div>
+
+      <!-- Profile visibility -->
+      <div class="status-card status-card--visibility">
+        <h2 class="status-card__title">Profile Visibility</h2>
+
+        <div class="visibility-display">
+          <span class="availability-dot" aria-hidden="true"></span>
+          <span class="visibility-display__label">Your profile is visible</span>
+        </div>
+
+        <p class="status-card__hint">Customers can find your profile in freelancer searches.</p>
+
+        <a href="#" class="btn-secondary btn-block">Manage Visibility</a>
+      </div>
+
+    </section>
+
+    <!-- ============ QUICK STATISTICS ============ -->
+    <section class="stats-row">
+
+      <div class="stat-card">
+        <span class="stat-card__value">⭐ 4.8</span>
+        <span class="stat-card__label">Rating</span>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-card__value">24</span>
+        <span class="stat-card__label">Reviews</span>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-card__value">3</span>
+        <span class="stat-card__label">Projects</span>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-card__value">12</span>
+        <span class="stat-card__label">Profile Views</span>
+      </div>
+
+    </section>
+
+    <!-- ============ SKILLS + PROFESSIONAL INFORMATION ============ -->
+    <section class="info-row">
+
+      <!-- Skills — will eventually be populated from the Skills table -->
+      <div class="panel skills-panel">
+        <h2 class="panel__title">Your Skills</h2>
+
+        <div class="skills-list">
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">CSS</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">MySQL</span>
+          <a href="#" class="skill-tag skill-tag--add">+ Add Skill</a>
+        </div>
+      </div>
+
+      <!-- Professional information — will eventually come from the Freelancer table -->
+      <div class="panel info-panel">
+        <h2 class="panel__title">Professional Information</h2>
+
+        <dl class="info-list">
+          <div class="info-list__row">
+            <dt>Professional Title</dt>
+            <dd>Full Stack Web Developer</dd>
+          </div>
+          <div class="info-list__row">
+            <dt>Domain</dt>
+            <dd>Web Development</dd>
+          </div>
+          <div class="info-list__row">
+            <dt>Experience</dt>
+            <dd>3 Years</dd>
+          </div>
+          <div class="info-list__row">
+            <dt>Hourly Rate</dt>
+            <dd>₹500 / hour</dd>
+          </div>
+        </dl>
+
+        <a href="#" class="btn-secondary btn-block">Edit Profile</a>
+      </div>
+
+    </section>
+
+    <!-- ============ PORTFOLIO — will eventually come from the Portfolio table ============ -->
+    <section class="panel portfolio-panel" id="portfolio">
+      <div class="panel__head">
+        <div>
+          <h2 class="panel__title">My Portfolio</h2>
+          <p class="panel__subtitle">Projects you&rsquo;ve delivered for previous clients</p>
+        </div>
+        <a href="#" class="btn-primary portfolio-panel__add">+ Add New Project</a>
+      </div>
+
+      <div class="portfolio-grid">
+
+        <article class="portfolio-card">
+          <h3 class="portfolio-card__title">E-Commerce Website</h3>
+          <div class="portfolio-card__tags">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">MySQL</span>
+          </div>
+          <p class="portfolio-card__desc">Modern e-commerce platform with user authentication and product management.</p>
+          <a href="#" class="btn-secondary btn-block">View Project</a>
+        </article>
+
+        <article class="portfolio-card">
+          <h3 class="portfolio-card__title">Company Website</h3>
+          <div class="portfolio-card__tags">
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
+          </div>
+          <p class="portfolio-card__desc">Responsive corporate website built for a growing local business.</p>
+          <a href="#" class="btn-secondary btn-block">View Project</a>
+        </article>
+
+        <article class="portfolio-card">
+          <h3 class="portfolio-card__title">Analytics Dashboard</h3>
+          <div class="portfolio-card__tags">
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">MySQL</span>
+          </div>
+          <p class="portfolio-card__desc">Interactive business analytics dashboard with live data visualizations.</p>
+          <a href="#" class="btn-secondary btn-block">View Project</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ OPPORTUNITIES FOR YOU (future ML integration point) ============
+         Isolated section so a future recommendation model (skills, domain,
+         experience, rating, previous work) can populate it independently. -->
+    <section class="panel opportunities-panel" id="opportunities-for-you">
+      <h2 class="panel__title">✦ Opportunities For You</h2>
+      <div class="opportunities-empty">
+        <p>Personalized opportunities will appear here.</p>
+      </div>
+    </section>
+
+    <!-- ============ MESSAGES + REVIEWS + NOTIFICATIONS ============ -->
+    <section class="engagement-row">
+
+      <!-- Recent messages — will eventually come from the Message table -->
+      <div class="widget">
+        <h3 class="widget__title">Recent Messages</h3>
+
+        <ul class="message-list">
+          <li class="message-item">
+            <p class="message-item__sender">Rahul Sharma</p>
+            <p class="message-item__preview">I need a website for my company...</p>
+            <span class="message-item__time">5 min ago</span>
+          </li>
+          <li class="message-item">
+            <p class="message-item__sender">Priya Patil</p>
+            <p class="message-item__preview">Are you available for a project?</p>
+            <span class="message-item__time">1 hour ago</span>
+          </li>
+          <li class="message-item">
+            <p class="message-item__sender">Nims Corporation</p>
+            <p class="message-item__preview">Can we discuss the requirements?</p>
+            <span class="message-item__time">Yesterday</span>
+          </li>
+        </ul>
+
+        <a href="messages.html" class="widget__link">View All Messages →</a>
+      </div>
+
+      <!-- Recent reviews — will eventually come from the Review table -->
+      <div class="widget">
+        <h3 class="widget__title">Recent Reviews</h3>
+
+        <ul class="review-list">
+          <li class="review-item">
+            <span class="review-item__stars">⭐⭐⭐⭐⭐</span>
+            <p class="review-item__quote">&ldquo;Excellent work and communication.&rdquo;</p>
+            <span class="review-item__author">— Customer</span>
+          </li>
+          <li class="review-item">
+            <span class="review-item__stars">⭐⭐⭐⭐</span>
+            <p class="review-item__quote">&ldquo;Very good developer and delivered on time.&rdquo;</p>
+            <span class="review-item__author">— Customer</span>
+          </li>
+        </ul>
+
+        <a href="#" class="widget__link">View All Reviews →</a>
+      </div>
+
+      <!-- Notifications preview — will eventually come from the Notification table -->
+      <div class="widget">
+        <h3 class="widget__title">🔔 Notifications</h3>
+
+        <ul class="activity-list">
+          <li class="activity-item">
+            <span class="activity-item__dot"></span>
+            New message from Nims
+            <span class="activity-item__time">5 minutes ago</span>
+          </li>
+          <li class="activity-item">
+            <span class="activity-item__dot"></span>
+            You received a 5-star review
+            <span class="activity-item__time">1 hour ago</span>
+          </li>
+          <li class="activity-item">
+            <span class="activity-item__dot"></span>
+            Your profile was viewed
+            <span class="activity-item__time">Today</span>
+          </li>
+        </ul>
+
+        <a href="notifications.html" class="widget__link">View All →</a>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__brand">
+      <p class="footer__name">Freelancer Hub</p>
+      <p class="footer__tagline">Find talent. Build great things.</p>
+    </div>
+    <p class="footer__copy">© 2026 Freelancer Hub</p>
+    <div class="footer__links">
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard · Freelancer Hub</title>
+  <link rel="stylesheet" href="customer-dashboard.css" />
+</head>
+<body>
+
+  <!-- ============ ANIMATED BACKGROUND LAYERS (matches login/register) ============ -->
+  <div class="bg">
+    <div class="bg__grid"></div>
+    <div class="bg__glow bg__glow--primary"></div>
+    <div class="bg__glow bg__glow--secondary"></div>
+    <div class="bg__streak bg__streak--one"></div>
+    <div class="bg__streak bg__streak--two"></div>
+    <div class="bg__scanline"></div>
+
+    <div class="bg__particles">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <!-- ============ TOP NAVIGATION (sticky) ============ -->
+  <header class="navbar">
+    <div class="navbar__logo">
+      <img class="navbar__logo-mark" src="fh-icon.png" alt="Freelancer Hub" />
+      <span class="navbar__logo-text">Freelancer Hub</span>
+    </div>
+
+    <nav class="navbar__links">
+      <a href="customer-dashboard.html" class="navbar__link is-active">Dashboard</a>
+      <a href="#" class="navbar__link">Find Freelancers</a>
+      <a href="#" class="navbar__link">Messages</a>
+    </nav>
+
+    <div class="navbar__actions">
+      <a href="notifications.html" class="navbar__icon-btn" aria-label="Notifications">
+        <span aria-hidden="true">🔔</span>
+        <span class="navbar__badge">3</span>
+      </a>
+      <a href="#" class="navbar__icon-btn navbar__icon-btn--profile" aria-label="Profile">
+        <span aria-hidden="true">👤</span>
+        <span class="navbar__profile-label">Profile</span>
+      </a>
+      <a href="login.html" class="navbar__logout">Logout</a>
+    </div>
+  </header>
+
+  <main class="dashboard">
+
+    <!-- ============ WELCOME SECTION ============ -->
+    <section class="welcome">
+      <h1 class="welcome__title">Welcome back, [Customer Name]! 👋</h1>
+      <p class="welcome__subtitle">Find the right freelancer for your next project.</p>
+    </section>
+
+    <div class="dashboard-grid">
+
+      <!-- ============ MAIN COLUMN ============ -->
+      <div class="dashboard-main">
+
+        <!-- ============ SEARCH SECTION ============ -->
+        <section class="panel search-panel">
+          <h2 class="panel__title">What do you need help with?</h2>
+          <p class="panel__subtitle">Search for freelancers by skill, domain, or expertise.</p>
+
+          <form class="search-bar" action="#" method="get">
+            <span class="search-bar__icon" aria-hidden="true">🔍</span>
+            <input
+              type="text"
+              class="search-bar__input"
+              name="query"
+              placeholder='Search &quot;Web Development&quot;, &quot;UI/UX&quot;, &quot;Python&quot;...'
+            />
+            <button type="submit" class="btn-primary search-bar__btn">
+              <span>Search Freelancers</span>
+            </button>
+          </form>
+
+          <!-- ============ POPULAR DOMAINS ============ -->
+          <div class="domains">
+            <h3 class="domains__title">Explore Popular Domains</h3>
+
+            <div class="domains__grid">
+
+              <a href="#" class="domain-chip">
+                <span class="domain-chip__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="8 6 3 12 8 18"></polyline>
+                    <polyline points="16 6 21 12 16 18"></polyline>
+                  </svg>
+                </span>
+                <span class="domain-chip__label">Web Development</span>
+              </a>
+
+              <a href="#" class="domain-chip">
+                <span class="domain-chip__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                  </svg>
+                </span>
+                <span class="domain-chip__label">UI/UX Design</span>
+              </a>
+
+              <a href="#" class="domain-chip">
+                <span class="domain-chip__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="7" y="2" width="10" height="20" rx="2"></rect>
+                    <line x1="11" y1="18" x2="13" y2="18"></line>
+                  </svg>
+                </span>
+                <span class="domain-chip__label">Mobile Development</span>
+              </a>
+
+              <a href="#" class="domain-chip">
+                <span class="domain-chip__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                    <polyline points="6 9 9.5 12.5 6 16"></polyline>
+                    <line x1="12" y1="16" x2="16" y2="16"></line>
+                  </svg>
+                </span>
+                <span class="domain-chip__label">Python Development</span>
+              </a>
+
+              <a href="#" class="domain-chip">
+                <span class="domain-chip__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="21" x2="5" y2="12"></line>
+                    <line x1="12" y1="21" x2="12" y2="7"></line>
+                    <line x1="19" y1="21" x2="19" y2="15"></line>
+                  </svg>
+                </span>
+                <span class="domain-chip__label">Data Science</span>
+              </a>
+
+              <a href="#" class="domain-chip">
+                <span class="domain-chip__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <circle cx="4.5" cy="7" r="1.6"></circle>
+                    <circle cx="19.5" cy="7" r="1.6"></circle>
+                    <circle cx="4.5" cy="17" r="1.6"></circle>
+                    <circle cx="19.5" cy="17" r="1.6"></circle>
+                    <line x1="6" y1="8" x2="10" y2="10.5"></line>
+                    <line x1="18" y1="8" x2="14" y2="10.5"></line>
+                    <line x1="6" y1="16" x2="10" y2="13.5"></line>
+                    <line x1="18" y1="16" x2="14" y2="13.5"></line>
+                  </svg>
+                </span>
+                <span class="domain-chip__label">AI / Machine Learning</span>
+              </a>
+
+              <a href="#" class="domain-chip">
+                <span class="domain-chip__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2l7 3v6c0 5-3.2 8.5-7 10-3.8-1.5-7-5-7-10V5l7-3z"></path>
+                  </svg>
+                </span>
+                <span class="domain-chip__label">Cybersecurity</span>
+              </a>
+
+              <a href="#" class="domain-chip">
+                <span class="domain-chip__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6.5 18a4 4 0 01-.5-7.97A5.5 5.5 0 0117 8.5a4.5 4.5 0 01-.5 8.98"></path>
+                    <path d="M6.5 18h10"></path>
+                  </svg>
+                </span>
+                <span class="domain-chip__label">Cloud Computing</span>
+              </a>
+
+            </div>
+          </div>
+
+          <!-- ============ QUICK FILTERS ============ -->
+          <div class="filters">
+            <h3 class="filters__title">Quick Filters</h3>
+
+            <div class="filters__grid">
+
+              <div class="filter-field">
+                <label for="filter-availability">Availability</label>
+                <select id="filter-availability" name="availability">
+                  <option>Available</option>
+                  <option>Busy</option>
+                  <option>Any</option>
+                </select>
+              </div>
+
+              <div class="filter-field">
+                <label for="filter-rating">Rating</label>
+                <select id="filter-rating" name="rating">
+                  <option>4+ ⭐</option>
+                  <option>3+ ⭐</option>
+                  <option>Any</option>
+                </select>
+              </div>
+
+              <div class="filter-field">
+                <label for="filter-experience">Experience</label>
+                <select id="filter-experience" name="experience">
+                  <option>Any</option>
+                  <option>1+ Years</option>
+                  <option>3+ Years</option>
+                  <option>5+ Years</option>
+                </select>
+              </div>
+
+              <div class="filter-field">
+                <label for="filter-rate">Hourly Rate</label>
+                <select id="filter-rate" name="hourlyRate">
+                  <option>Any</option>
+                  <option>Under ₹500/hr</option>
+                  <option>₹500–₹1000/hr</option>
+                  <option>₹1000+/hr</option>
+                </select>
+              </div>
+
+            </div>
+
+            <button type="button" class="btn-secondary filters__apply">Apply Filters</button>
+          </div>
+        </section>
+
+        <!-- ============ AI RECOMMENDED (future ML integration point) ============
+             This section is intentionally isolated so a future ranking model
+             (skill match, experience, rating, reviews, availability, rate)
+             can populate it without touching the rest of the dashboard. -->
+        <section class="panel ai-panel" id="ai-recommended">
+          <h2 class="panel__title">✦ Recommended for You</h2>
+          <p class="panel__subtitle">Personalized matches — powered by Freelancer Hub AI (coming soon)</p>
+
+          <div class="freelancer-grid">
+
+            <article class="freelancer-card">
+              <div class="freelancer-card__head">
+                <div class="freelancer-card__avatar">SK</div>
+                <div>
+                  <h3 class="freelancer-card__name">Sana Khan</h3>
+                  <p class="freelancer-card__title">Data Scientist</p>
+                </div>
+              </div>
+
+              <div class="freelancer-card__meta">
+                <span class="freelancer-card__rating">⭐ 4.9</span>
+                <span class="freelancer-card__availability is-available">🟢 Available</span>
+              </div>
+
+              <div class="freelancer-card__skills">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Pandas</span>
+                <span class="skill-tag">Machine Learning</span>
+              </div>
+
+              <div class="freelancer-card__footer">
+                <span class="freelancer-card__exp">5 Years Experience</span>
+                <span class="freelancer-card__rate">₹800/hr</span>
+              </div>
+
+              <div class="freelancer-card__actions">
+                <a href="#" class="btn-secondary btn-block">View Profile</a>
+                <a href="#" class="btn-primary btn-block">Message</a>
+              </div>
+            </article>
+
+            <article class="freelancer-card">
+              <div class="freelancer-card__head">
+                <div class="freelancer-card__avatar">VR</div>
+                <div>
+                  <h3 class="freelancer-card__name">Vikram Rao</h3>
+                  <p class="freelancer-card__title">Cloud Engineer</p>
+                </div>
+              </div>
+
+              <div class="freelancer-card__meta">
+                <span class="freelancer-card__rating">⭐ 4.8</span>
+                <span class="freelancer-card__availability is-available">🟢 Available</span>
+              </div>
+
+              <div class="freelancer-card__skills">
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Kubernetes</span>
+              </div>
+
+              <div class="freelancer-card__footer">
+                <span class="freelancer-card__exp">6 Years Experience</span>
+                <span class="freelancer-card__rate">₹750/hr</span>
+              </div>
+
+              <div class="freelancer-card__actions">
+                <a href="#" class="btn-secondary btn-block">View Profile</a>
+                <a href="#" class="btn-primary btn-block">Message</a>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ============ SIDEBAR ============ -->
+      <aside class="dashboard-sidebar">
+
+        <!-- Profile completion widget -->
+        <div class="widget">
+          <h3 class="widget__title">Complete your customer profile</h3>
+
+          <div class="profile-meter">
+            <div class="profile-meter__head">
+              <span>Profile Completion</span>
+              <span class="profile-meter__pct">80%</span>
+            </div>
+            <div class="profile-meter__track">
+              <div class="profile-meter__fill"></div>
+            </div>
+          </div>
+
+          <p class="widget__hint">Complete your profile to get better freelancer recommendations.</p>
+
+          <a href="#" class="btn-primary btn-block">Complete Profile</a>
+        </div>
+
+        <!-- Notifications preview widget -->
+        <div class="widget">
+          <h3 class="widget__title">🔔 Notifications</h3>
+
+          <ul class="notification-list">
+            <li class="notification-item">
+              <p class="notification-item__text">Rahul Sharma replied to your message</p>
+              <span class="notification-item__time">5 min ago</span>
+            </li>
+            <li class="notification-item">
+              <p class="notification-item__text">Your profile is 80% complete</p>
+              <span class="notification-item__time">Today</span>
+            </li>
+          </ul>
+
+          <a href="notifications.html" class="widget__link">View All Notifications →</a>
+        </div>
+
+        <!-- Recent activity widget -->
+        <div class="widget">
+          <h3 class="widget__title">Recent Activity</h3>
+
+          <ul class="activity-list">
+            <li class="activity-item">
+              <span class="activity-item__dot"></span>
+              You viewed Rahul Sharma&rsquo;s profile
+            </li>
+            <li class="activity-item">
+              <span class="activity-item__dot"></span>
+              You messaged Priya Patil
+            </li>
+            <li class="activity-item">
+              <span class="activity-item__dot"></span>
+              You searched for &ldquo;Web Development&rdquo;
+            </li>
+          </ul>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__brand">
+      <p class="footer__name">Freelancer Hub</p>
+      <p class="footer__tagline">Find talent. Build great things.</p>
+    </div>
+    <p class="footer__copy">© 2026 Freelancer Hub</p>
+    <div class="footer__links">
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+  </footer>
+
+</body>
+</html>
