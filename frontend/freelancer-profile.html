@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rahul Sharma · Freelancer Hub</title>
+  <link rel="stylesheet" href="freelancer-profile.css" />
+</head>
+<body>
+
+  <!-- ============ ANIMATED BACKGROUND LAYERS (matches the rest of Freelancer Hub) ============ -->
+  <div class="bg">
+    <div class="bg__grid"></div>
+    <div class="bg__glow bg__glow--primary"></div>
+    <div class="bg__glow bg__glow--secondary"></div>
+    <div class="bg__streak bg__streak--one"></div>
+    <div class="bg__streak bg__streak--two"></div>
+    <div class="bg__scanline"></div>
+
+    <div class="bg__particles">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <!-- ============ TOP NAVIGATION (sticky) ============ -->
+  <header class="navbar">
+    <div class="navbar__logo">
+      <img class="navbar__logo-mark" src="fh-icon.png" alt="Freelancer Hub" />
+      <span class="navbar__logo-text">Freelancer Hub</span>
+    </div>
+
+    <nav class="navbar__links">
+      <a href="customer-dashboard.html" class="navbar__link">Dashboard</a>
+      <a href="search.html" class="navbar__link is-active">Find Freelancers</a>
+      <a href="messages.html" class="navbar__link">Messages</a>
+      <a href="notifications.html" class="navbar__link">Notifications</a>
+      <a href="#" class="navbar__link">Profile</a>
+    </nav>
+
+    <div class="navbar__actions">
+      <span class="navbar__role">👤 Customer</span>
+      <a href="login.html" class="navbar__logout">Logout</a>
+    </div>
+  </header>
+
+  <main class="profile-page">
+
+    <!-- ============ BREADCRUMB ============ -->
+    <p class="breadcrumb">Dashboard / Find Freelancers / Freelancer Profile</p>
+
+    <!-- ============ PROFILE HEADER ============ -->
+    <section class="panel profile-header">
+      <div class="profile-header__photo">
+        <span class="profile-header__initials">RS</span>
+      </div>
+
+      <div class="profile-header__info">
+        <div class="profile-header__name-row">
+          <h1 class="profile-header__name">Rahul Sharma</h1>
+          <span class="profile-badge" title="Active freelancer on Freelancer Hub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Active
+          </span>
+        </div>
+
+        <p class="profile-header__title">Full Stack Web Developer</p>
+
+        <div class="profile-header__meta">
+          <span class="profile-header__rating">⭐ 4.8 / 5</span>
+          <span class="freelancer-card__availability is-available">🟢 Available</span>
+          <span class="profile-header__location">📍 Pune, India</span>
+        </div>
+
+        <a href="messages.html" class="btn-primary profile-header__cta">Message Freelancer</a>
+      </div>
+    </section>
+
+    <!-- ============ STATISTICS ============ -->
+    <section class="stats-row">
+      <div class="stat-card">
+        <span class="stat-card__value">4.8</span>
+        <span class="stat-card__label">Rating</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__value">24</span>
+        <span class="stat-card__label">Reviews</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__value">3+</span>
+        <span class="stat-card__label">Years Experience</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__value">18</span>
+        <span class="stat-card__label">Projects</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__value">₹500</span>
+        <span class="stat-card__label">/ hour</span>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT + AVAILABILITY ============ -->
+    <section class="info-row">
+
+      <!-- About Me — will eventually come from the Freelancer table -->
+      <div class="panel about-panel">
+        <h2 class="panel__title">About Me</h2>
+        <p class="about-panel__text">
+          I am a full-stack web developer specializing in modern and responsive
+          web applications. I work with frontend and backend technologies to
+          build reliable and user-friendly digital products.
+        </p>
+
+        <dl class="info-list">
+          <div class="info-list__row">
+            <dt>Professional Title</dt>
+            <dd>Full Stack Web Developer</dd>
+          </div>
+          <div class="info-list__row">
+            <dt>Domain</dt>
+            <dd>Web Development</dd>
+          </div>
+          <div class="info-list__row">
+            <dt>Experience</dt>
+            <dd>3 Years</dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- Availability — will eventually come from the Freelancer table -->
+      <div class="panel availability-panel">
+        <h2 class="panel__title">Availability</h2>
+
+        <div class="availability-display">
+          <span class="availability-dot" aria-hidden="true"></span>
+          <span class="availability-display__label">Available for new projects</span>
+        </div>
+
+        <p class="availability-panel__hint">Usually responds within a few hours.</p>
+
+        <div class="availability-panel__rate">
+          <span class="availability-panel__rate-label">Hourly Rate</span>
+          <span class="availability-panel__rate-value">₹500 / hour</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ============ SKILLS — will eventually come from the Skills table ============ -->
+    <section class="panel skills-panel">
+      <h2 class="panel__title">Skills &amp; Expertise</h2>
+      <div class="skills-list">
+        <span class="skill-tag">HTML</span>
+        <span class="skill-tag">CSS</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">React</span>
+        <span class="skill-tag">Node.js</span>
+        <span class="skill-tag">Express</span>
+        <span class="skill-tag">MySQL</span>
+        <span class="skill-tag">Git</span>
+        <span class="skill-tag">REST APIs</span>
+      </div>
+    </section>
+
+    <!-- ============ PORTFOLIO — will eventually come from the Portfolio table ============ -->
+    <section class="panel portfolio-panel">
+      <div class="panel__head">
+        <h2 class="panel__title">Portfolio</h2>
+        <a href="#" class="widget__link">View Full Portfolio →</a>
+      </div>
+
+      <div class="portfolio-grid">
+
+        <article class="portfolio-card">
+          <div class="portfolio-card__preview" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="8 6 3 12 8 18"></polyline>
+              <polyline points="16 6 21 12 16 18"></polyline>
+            </svg>
+          </div>
+          <h3 class="portfolio-card__title">E-Commerce Platform</h3>
+          <div class="portfolio-card__tags">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">MySQL</span>
+          </div>
+          <p class="portfolio-card__desc">Full-stack e-commerce application with authentication and product management.</p>
+          <a href="#" class="btn-secondary btn-block">View Project</a>
+        </article>
+
+        <article class="portfolio-card">
+          <div class="portfolio-card__preview" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="14" rx="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="18" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <h3 class="portfolio-card__title">Company Website</h3>
+          <div class="portfolio-card__tags">
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
+          </div>
+          <p class="portfolio-card__desc">Responsive corporate website designed for a technology company.</p>
+          <a href="#" class="btn-secondary btn-block">View Project</a>
+        </article>
+
+        <article class="portfolio-card">
+          <div class="portfolio-card__preview" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="21" x2="5" y2="12"></line>
+              <line x1="12" y1="21" x2="12" y2="7"></line>
+              <line x1="19" y1="21" x2="19" y2="15"></line>
+            </svg>
+          </div>
+          <h3 class="portfolio-card__title">Analytics Dashboard</h3>
+          <div class="portfolio-card__tags">
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">MySQL</span>
+          </div>
+          <p class="portfolio-card__desc">Interactive dashboard for visualizing business data.</p>
+          <a href="#" class="btn-secondary btn-block">View Project</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ REVIEWS — will eventually come from the Review table ============ -->
+    <section class="panel reviews-panel">
+      <h2 class="panel__title">Reviews &amp; Ratings</h2>
+
+      <div class="reviews-summary">
+        <div class="reviews-summary__score">
+          <span class="reviews-summary__value">⭐ 4.8 / 5</span>
+          <span class="reviews-summary__count">Based on 24 reviews</span>
+        </div>
+
+        <div class="rating-bars">
+          <div class="rating-bar">
+            <span class="rating-bar__label">5 ⭐</span>
+            <div class="rating-bar__track"><div class="rating-bar__fill"></div></div>
+            <span class="rating-bar__count">20</span>
+          </div>
+          <div class="rating-bar">
+            <span class="rating-bar__label">4 ⭐</span>
+            <div class="rating-bar__track"><div class="rating-bar__fill"></div></div>
+            <span class="rating-bar__count">4</span>
+          </div>
+          <div class="rating-bar">
+            <span class="rating-bar__label">3 ⭐</span>
+            <div class="rating-bar__track"><div class="rating-bar__fill"></div></div>
+            <span class="rating-bar__count">0</span>
+          </div>
+          <div class="rating-bar">
+            <span class="rating-bar__label">2 ⭐</span>
+            <div class="rating-bar__track"><div class="rating-bar__fill"></div></div>
+            <span class="rating-bar__count">0</span>
+          </div>
+          <div class="rating-bar">
+            <span class="rating-bar__label">1 ⭐</span>
+            <div class="rating-bar__track"><div class="rating-bar__fill"></div></div>
+            <span class="rating-bar__count">0</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-grid">
+        <article class="review-card">
+          <span class="review-card__stars">⭐⭐⭐⭐⭐</span>
+          <p class="review-card__quote">Excellent developer. Very professional and delivered the project on time.</p>
+          <span class="review-card__author">— Customer</span>
+        </article>
+        <article class="review-card">
+          <span class="review-card__stars">⭐⭐⭐⭐</span>
+          <p class="review-card__quote">Good communication and technical skills.</p>
+          <span class="review-card__author">— Customer</span>
+        </article>
+      </div>
+
+      <a href="#" class="widget__link">View All Reviews →</a>
+    </section>
+
+    <!-- ============ MESSAGE CTA ============ -->
+    <section class="cta-panel">
+      <h2 class="cta-panel__title">Interested in working with Rahul?</h2>
+      <p class="cta-panel__text">Discuss your project requirements directly with this freelancer.</p>
+      <a href="messages.html" class="btn-primary cta-panel__btn">💬 Message Freelancer</a>
+    </section>
+
+    <!-- ============ SIMILAR FREELANCERS ============ -->
+    <section class="panel similar-panel">
+      <h2 class="panel__title">Similar Freelancers</h2>
+
+      <div class="similar-grid">
+
+        <article class="similar-card">
+          <div class="similar-card__avatar">PP</div>
+          <h3 class="similar-card__name">Priya Patil</h3>
+          <p class="similar-card__title">Frontend Developer</p>
+          <div class="similar-card__meta">
+            <span class="freelancer-card__rating">⭐ 4.7</span>
+            <span class="freelancer-card__availability is-available">🟢 Available</span>
+          </div>
+          <a href="freelancer-profile.html" class="btn-secondary btn-block">View Profile</a>
+        </article>
+
+        <article class="similar-card">
+          <div class="similar-card__avatar">SK</div>
+          <h3 class="similar-card__name">Sneha Kulkarni</h3>
+          <p class="similar-card__title">React Developer</p>
+          <div class="similar-card__meta">
+            <span class="freelancer-card__rating">⭐ 4.8</span>
+            <span class="freelancer-card__availability is-available">🟢 Available</span>
+          </div>
+          <a href="freelancer-profile.html" class="btn-secondary btn-block">View Profile</a>
+        </article>
+
+        <article class="similar-card">
+          <div class="similar-card__avatar">AJ</div>
+          <h3 class="similar-card__name">Aditya Joshi</h3>
+          <p class="similar-card__title">Python Developer</p>
+          <div class="similar-card__meta">
+            <span class="freelancer-card__rating">⭐ 4.6</span>
+            <span class="freelancer-card__availability is-busy">🔴 Busy</span>
+          </div>
+          <a href="freelancer-profile.html" class="btn-secondary btn-block">View Profile</a>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__brand">
+      <p class="footer__name">Freelancer Hub</p>
+      <p class="footer__tagline">Find talent. Build great things.</p>
+    </div>
+    <p class="footer__copy">© 2026 Freelancer Hub</p>
+    <div class="footer__links">
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+  </footer>
+
+</body>
+</html>
