@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reviews | Freelancer Hub</title>
+  <link rel="stylesheet" href="reviews.css">
+</head>
+<body>
+
+  <!-- ========== ANIMATED BACKGROUND ========== -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__grid"></div>
+    <div class="bg__glow bg__glow--violet"></div>
+    <div class="bg__glow bg__glow--cyan"></div>
+    <div class="bg__glow bg__glow--blue"></div>
+    <div class="bg__streak bg__streak--1"></div>
+    <div class="bg__streak bg__streak--2"></div>
+    <div class="bg__scanline"></div>
+    <span class="bg__particle"></span>
+    <span class="bg__particle"></span>
+    <span class="bg__particle"></span>
+    <span class="bg__particle"></span>
+  </div>
+
+  <!-- ========== TOP NAVIGATION ========== -->
+  <header class="navbar">
+    <a class="navbar__logo" href="customer-dashboard.html">
+      <img src="fh-icon.png" alt="Freelancer Hub">
+      <span>Freelancer Hub</span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <ul class="navbar__links">
+        <!-- Reviews is a sub-page of the dashboard, so Dashboard stays highlighted -->
+        <li><a class="navbar__link navbar__link--active" href="customer-dashboard.html" aria-current="page">Dashboard</a></li>
+        <li><a class="navbar__link" href="search.html">Find Freelancers</a></li>
+        <li><a class="navbar__link" href="messages.html">Messages</a></li>
+        <li><a class="navbar__link" href="notifications.html">Notifications</a></li>
+        <li><a class="navbar__link" href="#">Profile</a></li>
+      </ul>
+    </nav>
+
+    <div class="navbar__actions">
+      <span class="navbar__badge">👤 Customer</span>
+      <a class="navbar__logout" href="login.html">Logout</a>
+    </div>
+  </header>
+
+  <main class="reviews-page">
+
+    <!-- ========== PAGE HEADER ========== -->
+    <section class="page-header">
+      <div>
+        <p class="breadcrumb"><a href="customer-dashboard.html">Dashboard</a><span>/</span>Reviews</p>
+        <h1 class="page-header__title">Reviews</h1>
+        <p class="page-header__subtitle">Share your experience and help build a trusted freelancing community.</p>
+      </div>
+      <a class="btn" href="#write-review">Write a Review</a>
+    </section>
+
+    <!-- ========== SUMMARY CARDS ========== -->
+    <section class="review-summary" aria-label="Review summary">
+      <article class="review-summary__card">
+        <span class="review-summary__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </span>
+        <div>
+          <p class="review-summary__value">4</p>
+          <p class="review-summary__label">Reviews Given</p>
+        </div>
+      </article>
+
+      <article class="review-summary__card review-summary__card--rating">
+        <span class="review-summary__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+        </span>
+        <div>
+          <p class="review-summary__value">4.7</p>
+          <p class="review-summary__label">Average Rating Given</p>
+        </div>
+      </article>
+
+      <article class="review-summary__card review-summary__card--month">
+        <span class="review-summary__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        </span>
+        <div>
+          <p class="review-summary__value">2</p>
+          <p class="review-summary__label">This Month</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ========== WRITE A REVIEW ========== -->
+    <section class="panel review-form" id="write-review" aria-labelledby="write-review-heading">
+      <h2 class="panel__title" id="write-review-heading">Write a Review</h2>
+      <p class="panel__subtitle">Share your experience with a freelancer.</p>
+
+      <div class="review-form__layout">
+        <form class="review-form__fields" action="#" method="post">
+          <input type="hidden" name="customerId" value="1">
+          <input type="hidden" id="freelancerId" name="freelancerId" value="101">
+
+          <!-- Freelancer being reviewed -->
+          <div class="reviewer-card" data-freelancer-id="101">
+            <span class="avatar avatar--lg" aria-hidden="true">RS</span>
+            <div class="reviewer-card__info">
+              <h3 class="reviewer-card__name">Rahul Sharma</h3>
+              <p class="reviewer-card__role">Full Stack Web Developer</p>
+              <p class="reviewer-card__meta">Pune, India · 4.8 ★</p>
+            </div>
+            <a class="btn btn--small" href="freelancer-profile.html">View Profile</a>
+          </div>
+
+          <!-- Rating -->
+          <fieldset class="review-form__group">
+            <legend class="review-form__legend">How would you rate your experience?</legend>
+            <div class="rating">
+              <div class="rating__stars">
+                <input class="rating__input" type="radio" name="rating" id="rating-5" value="5">
+                <label class="rating__star" for="rating-5" title="5 stars"><span class="visually-hidden">5 stars</span>★</label>
+                <input class="rating__input" type="radio" name="rating" id="rating-4" value="4" checked>
+                <label class="rating__star" for="rating-4" title="4 stars"><span class="visually-hidden">4 stars</span>★</label>
+                <input class="rating__input" type="radio" name="rating" id="rating-3" value="3">
+                <label class="rating__star" for="rating-3" title="3 stars"><span class="visually-hidden">3 stars</span>★</label>
+                <input class="rating__input" type="radio" name="rating" id="rating-2" value="2">
+                <label class="rating__star" for="rating-2" title="2 stars"><span class="visually-hidden">2 stars</span>★</label>
+                <input class="rating__input" type="radio" name="rating" id="rating-1" value="1">
+                <label class="rating__star" for="rating-1" title="1 star"><span class="visually-hidden">1 star</span>★</label>
+              </div>
+              <span class="rating__value">4 / 5</span>
+            </div>
+          </fieldset>
+
+          <!-- Comment -->
+          <div class="review-form__group">
+            <label class="review-form__label" for="comment">Your Review</label>
+            <textarea class="review-textarea" id="comment" name="comment" maxlength="500" rows="6" placeholder="Tell us about your experience working with this freelancer..."></textarea>
+            <p class="review-form__help">Maximum 500 characters.</p>
+          </div>
+
+          <div class="review-form__actions">
+            <button class="btn btn--primary" type="button">Submit Review</button>
+          </div>
+        </form>
+
+        <!-- Guidelines -->
+        <aside class="review-guidelines" aria-labelledby="guidelines-heading">
+          <h3 class="review-guidelines__title" id="guidelines-heading">Review Guidelines</h3>
+          <ul class="review-guidelines__list">
+            <li>Keep your feedback honest and constructive.</li>
+            <li>Focus on your experience with the freelancer.</li>
+            <li>Avoid sharing sensitive personal information.</li>
+            <li>Reviews help build trust within the Freelancer Hub community.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ========== PREVIOUS REVIEWS ========== -->
+    <section class="panel previous-reviews" aria-labelledby="previous-heading">
+      <h2 class="panel__title" id="previous-heading">Your Previous Reviews</h2>
+      <p class="panel__subtitle">Reviews you have submitted for freelancers.</p>
+
+      <ul class="previous-reviews__list">
+
+        <li>
+          <article class="review-card" data-review-id="1" data-customer-id="1" data-freelancer-id="101" data-rating="5">
+            <header class="review-card__header">
+              <span class="avatar review-card__avatar" aria-hidden="true">RS</span>
+              <div class="review-card__person">
+                <h3 class="review-card__name">Rahul Sharma</h3>
+                <p class="review-card__role">Full Stack Web Developer</p>
+              </div>
+              <p class="review-card__rating">
+                <span class="review-card__stars" aria-hidden="true">★★★★★</span>
+                <span class="review-card__score">5.0<span class="visually-hidden"> out of 5 stars</span></span>
+              </p>
+            </header>
+            <p class="review-card__comment">Rahul was very professional and communicated clearly throughout the project. The final result matched the requirements very well.</p>
+            <footer class="review-card__footer">
+              <time class="review-card__date" datetime="2026-09-18">September 18, 2026</time>
+              <a class="review-card__link" href="freelancer-profile.html">View Profile</a>
+            </footer>
+          </article>
+        </li>
+
+        <li>
+          <article class="review-card" data-review-id="2" data-customer-id="1" data-freelancer-id="102" data-rating="4">
+            <header class="review-card__header">
+              <span class="avatar avatar--violet review-card__avatar" aria-hidden="true">AP</span>
+              <div class="review-card__person">
+                <h3 class="review-card__name">Ananya Patel</h3>
+                <p class="review-card__role">UI/UX Designer</p>
+              </div>
+              <p class="review-card__rating">
+                <span class="review-card__stars" aria-hidden="true">★★★★☆</span>
+                <span class="review-card__score">4.0<span class="visually-hidden"> out of 5 stars</span></span>
+              </p>
+            </header>
+            <p class="review-card__comment">The design work was well organized and the communication was good. The final interface was clean and easy to use.</p>
+            <footer class="review-card__footer">
+              <time class="review-card__date" datetime="2026-09-05">September 5, 2026</time>
+              <a class="review-card__link" href="freelancer-profile.html">View Profile</a>
+            </footer>
+          </article>
+        </li>
+
+        <li>
+          <article class="review-card" data-review-id="3" data-customer-id="1" data-freelancer-id="103" data-rating="5">
+            <header class="review-card__header">
+              <span class="avatar avatar--cyan review-card__avatar" aria-hidden="true">AM</span>
+              <div class="review-card__person">
+                <h3 class="review-card__name">Arjun Mehta</h3>
+                <p class="review-card__role">Python Developer</p>
+              </div>
+              <p class="review-card__rating">
+                <span class="review-card__stars" aria-hidden="true">★★★★★</span>
+                <span class="review-card__score">5.0<span class="visually-hidden"> out of 5 stars</span></span>
+              </p>
+            </header>
+            <p class="review-card__comment">Arjun understood the requirements quickly and explained each step clearly. The scripts he delivered were well documented and reliable.</p>
+            <footer class="review-card__footer">
+              <time class="review-card__date" datetime="2026-08-22">August 22, 2026</time>
+              <a class="review-card__link" href="freelancer-profile.html">View Profile</a>
+            </footer>
+          </article>
+        </li>
+
+        <li>
+          <article class="review-card" data-review-id="4" data-customer-id="1" data-freelancer-id="104" data-rating="5">
+            <header class="review-card__header">
+              <span class="avatar review-card__avatar" aria-hidden="true">PS</span>
+              <div class="review-card__person">
+                <h3 class="review-card__name">Priya Shah</h3>
+                <p class="review-card__role">Mobile App Developer</p>
+              </div>
+              <p class="review-card__rating">
+                <span class="review-card__stars" aria-hidden="true">★★★★★</span>
+                <span class="review-card__score">5.0<span class="visually-hidden"> out of 5 stars</span></span>
+              </p>
+            </header>
+            <p class="review-card__comment">Priya was responsive and delivered the prototype on schedule. She was open to feedback and made revisions quickly.</p>
+            <footer class="review-card__footer">
+              <time class="review-card__date" datetime="2026-08-09">August 9, 2026</time>
+              <a class="review-card__link" href="freelancer-profile.html">View Profile</a>
+            </footer>
+          </article>
+        </li>
+
+      </ul>
+
+      <!-- Empty state (hidden by default; show when the customer has no reviews) -->
+      <div class="empty-state" hidden>
+        <div class="empty-state__icon" aria-hidden="true">★</div>
+        <h3 class="empty-state__title">No reviews yet</h3>
+        <p class="empty-state__text">You haven't reviewed any freelancers yet.</p>
+        <a class="btn btn--primary" href="search.html">Find Freelancers</a>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

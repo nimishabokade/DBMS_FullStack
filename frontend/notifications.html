@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notifications | Freelancer Hub</title>
+  <link rel="stylesheet" href="notifications.css">
+</head>
+<body>
+
+  <!-- ========== ANIMATED BACKGROUND ========== -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__grid"></div>
+    <div class="bg__glow bg__glow--violet"></div>
+    <div class="bg__glow bg__glow--cyan"></div>
+    <div class="bg__glow bg__glow--blue"></div>
+    <div class="bg__streak bg__streak--1"></div>
+    <div class="bg__streak bg__streak--2"></div>
+    <div class="bg__scanline"></div>
+    <span class="bg__particle"></span>
+    <span class="bg__particle"></span>
+    <span class="bg__particle"></span>
+    <span class="bg__particle"></span>
+  </div>
+
+  <!-- ========== TOP NAVIGATION ========== -->
+  <header class="navbar">
+    <a class="navbar__logo" href="customer-dashboard.html">
+      <img src="fh-icon.png" alt="Freelancer Hub">
+      <span>Freelancer Hub</span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <ul class="navbar__links">
+        <li><a class="navbar__link" href="customer-dashboard.html">Dashboard</a></li>
+        <li><a class="navbar__link" href="search.html">Find Freelancers</a></li>
+        <li><a class="navbar__link" href="messages.html">Messages</a></li>
+        <li><a class="navbar__link navbar__link--active" href="notifications.html" aria-current="page">Notifications</a></li>
+        <li><a class="navbar__link" href="#">Profile</a></li>
+      </ul>
+    </nav>
+
+    <div class="navbar__actions">
+      <span class="navbar__badge">👤 Customer</span>
+      <a class="navbar__logout" href="login.html">Logout</a>
+    </div>
+  </header>
+
+  <main class="notifications-page">
+
+    <!-- ========== PAGE HEADER ========== -->
+    <section class="page-header">
+      <div>
+        <p class="breadcrumb"><a href="customer-dashboard.html">Dashboard</a><span>/</span>Notifications</p>
+        <h1 class="page-header__title">Notifications</h1>
+        <p class="page-header__subtitle">Stay updated with messages, activity, and important updates.</p>
+      </div>
+      <button class="btn" type="button">Mark all as read</button>
+    </section>
+
+    <!-- ========== SUMMARY CARDS ========== -->
+    <section class="notification-summary" aria-label="Notification summary">
+      <article class="notification-summary__card">
+        <span class="notification-summary__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+        </span>
+        <div>
+          <p class="notification-summary__value">3</p>
+          <p class="notification-summary__label">Unread</p>
+        </div>
+      </article>
+
+      <article class="notification-summary__card notification-summary__card--today">
+        <span class="notification-summary__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        </span>
+        <div>
+          <p class="notification-summary__value">5</p>
+          <p class="notification-summary__label">Today</p>
+        </div>
+      </article>
+
+      <article class="notification-summary__card notification-summary__card--all">
+        <span class="notification-summary__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.5 5.1 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.5-6.9A2 2 0 0 0 16.7 4H7.3a2 2 0 0 0-1.8 1.1z"/></svg>
+        </span>
+        <div>
+          <p class="notification-summary__value">12</p>
+          <p class="notification-summary__label">All Notifications</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ========== FILTER BAR ========== -->
+    <section class="notification-filters" aria-label="Notification filters">
+      <div class="notification-filters__tabs" role="group" aria-label="Filter by category">
+        <button class="notification-filters__tab notification-filters__tab--active" type="button" aria-pressed="true">All</button>
+        <button class="notification-filters__tab" type="button" aria-pressed="false">Unread</button>
+        <button class="notification-filters__tab" type="button" aria-pressed="false">Messages</button>
+        <button class="notification-filters__tab" type="button" aria-pressed="false">Reviews</button>
+        <button class="notification-filters__tab" type="button" aria-pressed="false">System</button>
+      </div>
+
+      <form class="notification-filters__search" role="search">
+        <label class="visually-hidden" for="notification-search">Search notifications</label>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input class="notification-filters__input" id="notification-search" type="search" placeholder="Search notifications...">
+      </form>
+    </section>
+
+    <!-- ========== NOTIFICATION LIST ========== -->
+    <section class="notification-panel" aria-labelledby="recent-heading">
+      <h2 class="notification-panel__title" id="recent-heading">Recent Notifications</h2>
+
+      <ul class="notification-list">
+
+        <!-- 1 · Unread · Message -->
+        <li>
+          <article class="notification notification--unread" data-notification-id="1" data-customer-id="1" data-freelancer-id="101" data-type="message" data-read="false">
+            <span class="notification__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </span>
+            <div class="notification__content">
+              <h3 class="notification__title">New message from Rahul Sharma</h3>
+              <p class="notification__description">Rahul Sharma replied to your conversation.</p>
+              <div class="notification__footer">
+                <time class="notification__time" datetime="2026-10-02T10:42">10 minutes ago</time>
+                <a class="notification__action" href="messages.html">View Message</a>
+              </div>
+            </div>
+            <span class="notification__indicator">Unread</span>
+          </article>
+        </li>
+
+        <!-- 2 · Unread · Freelancer match -->
+        <li>
+          <article class="notification notification--unread" data-notification-id="2" data-customer-id="1" data-freelancer-id="104" data-type="match" data-read="false">
+            <span class="notification__icon notification__icon--profile" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </span>
+            <div class="notification__content">
+              <h3 class="notification__title">New freelancer match</h3>
+              <p class="notification__description">A freelancer matching your Web Development search is now available.</p>
+              <div class="notification__footer">
+                <time class="notification__time" datetime="2026-10-02T10:17">35 minutes ago</time>
+                <a class="notification__action" href="freelancer-profile.html">View Freelancer</a>
+              </div>
+            </div>
+            <span class="notification__indicator">Unread</span>
+          </article>
+        </li>
+
+        <!-- 3 · Unread · Review -->
+        <li>
+          <article class="notification notification--unread" data-notification-id="3" data-customer-id="1" data-freelancer-id="101" data-type="review" data-read="false">
+            <span class="notification__icon notification__icon--review" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            </span>
+            <div class="notification__content">
+              <h3 class="notification__title">Review reminder</h3>
+              <p class="notification__description">You can leave a review for your completed interaction with Rahul Sharma.</p>
+              <div class="notification__footer">
+                <time class="notification__time" datetime="2026-10-02T08:52">2 hours ago</time>
+                <a class="notification__action" href="reviews.html">Write Review</a>
+              </div>
+            </div>
+            <span class="notification__indicator">Unread</span>
+          </article>
+        </li>
+
+        <!-- 4 · Read · Message -->
+        <li>
+          <article class="notification" data-notification-id="4" data-customer-id="1" data-freelancer-id="102" data-type="message" data-read="true">
+            <span class="notification__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </span>
+            <div class="notification__content">
+              <h3 class="notification__title">Message sent successfully</h3>
+              <p class="notification__description">Your message to Ananya Patel was delivered.</p>
+              <div class="notification__footer">
+                <time class="notification__time" datetime="2026-10-01T16:20">Yesterday</time>
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <!-- 5 · Read · Profile update -->
+        <li>
+          <article class="notification" data-notification-id="5" data-customer-id="1" data-freelancer-id="101" data-type="profile" data-read="true">
+            <span class="notification__icon notification__icon--profile" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </span>
+            <div class="notification__content">
+              <h3 class="notification__title">Freelancer profile updated</h3>
+              <p class="notification__description">Rahul Sharma has updated his professional profile.</p>
+              <div class="notification__footer">
+                <time class="notification__time" datetime="2026-10-01T11:05">Yesterday</time>
+                <a class="notification__action" href="freelancer-profile.html">View Profile</a>
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <!-- 6 · Read · System -->
+        <li>
+          <article class="notification" data-notification-id="6" data-customer-id="1" data-freelancer-id="" data-type="system" data-read="true">
+            <span class="notification__icon notification__icon--system" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            </span>
+            <div class="notification__content">
+              <h3 class="notification__title">Welcome to Freelancer Hub</h3>
+              <p class="notification__description">Your account is ready. Start exploring freelancers and building connections.</p>
+              <div class="notification__footer">
+                <time class="notification__time" datetime="2026-09-30T09:00">2 days ago</time>
+              </div>
+            </div>
+          </article>
+        </li>
+
+      </ul>
+
+      <!-- Empty state (hidden by default; show when there are no notifications) -->
+      <div class="empty-state" hidden>
+        <div class="empty-state__icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+        </div>
+        <h3 class="empty-state__title">No notifications yet</h3>
+        <p class="empty-state__text">Your updates and activity will appear here.</p>
+      </div>
+
+      <button class="btn load-more" type="button">Load More</button>
+    </section>
+
+  </main>
+
+</body>
+</html>

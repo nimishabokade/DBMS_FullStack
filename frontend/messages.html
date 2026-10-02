@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Messages | Freelancer Hub</title>
+  <link rel="stylesheet" href="messages.css">
+</head>
+<body>
+
+  <!-- ========== ANIMATED BACKGROUND ========== -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__grid"></div>
+    <div class="bg__glow bg__glow--violet"></div>
+    <div class="bg__glow bg__glow--cyan"></div>
+    <div class="bg__glow bg__glow--blue"></div>
+    <div class="bg__streak bg__streak--1"></div>
+    <div class="bg__streak bg__streak--2"></div>
+    <div class="bg__scanline"></div>
+    <span class="bg__particle"></span>
+    <span class="bg__particle"></span>
+    <span class="bg__particle"></span>
+    <span class="bg__particle"></span>
+  </div>
+
+  <!-- ========== TOP NAVIGATION ========== -->
+  <header class="navbar">
+    <a class="navbar__logo" href="customer-dashboard.html">
+      <img src="fh-icon.png" alt="Freelancer Hub">
+      <span>Freelancer Hub</span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <ul class="navbar__links">
+        <li><a class="navbar__link" href="customer-dashboard.html">Dashboard</a></li>
+        <li><a class="navbar__link" href="search.html">Find Freelancers</a></li>
+        <li><a class="navbar__link navbar__link--active" href="messages.html" aria-current="page">Messages</a></li>
+        <li><a class="navbar__link" href="notifications.html">Notifications</a></li>
+        <li><a class="navbar__link" href="#">Profile</a></li>
+      </ul>
+    </nav>
+
+    <div class="navbar__actions">
+      <span class="navbar__badge">👤 Customer</span>
+      <a class="navbar__logout" href="login.html">Logout</a>
+    </div>
+  </header>
+
+  <main class="page">
+
+    <!-- ========== PAGE HEADER ========== -->
+    <section class="page-header">
+      <p class="breadcrumb"><a href="customer-dashboard.html">Dashboard</a><span>/</span>Messages</p>
+      <h1 class="page-header__title">Messages</h1>
+      <p class="page-header__subtitle">Communicate with freelancers and manage your conversations.</p>
+    </section>
+
+    <!-- ========== MESSAGING INTERFACE ========== -->
+    <section class="messaging" aria-label="Messaging">
+
+      <!-- ----- Conversation list ----- -->
+      <aside class="conversations" aria-label="Conversations">
+        <div class="conversations__header">
+          <h2 class="conversations__title">Conversations</h2>
+          <form class="conversations__search" role="search">
+            <label class="conversations__search-label" for="conversation-search" hidden>Search conversations</label>
+            <span class="conversations__search-icon" aria-hidden="true">🔍</span>
+            <input class="conversations__search-input" id="conversation-search" type="search" placeholder="Search conversations..." aria-label="Search conversations">
+          </form>
+        </div>
+
+        <ul class="conversations__list">
+          <li class="conversation">
+            <a class="conversation__item conversation__item--active" href="#" aria-current="true" data-customer-id="1" data-freelancer-id="101">
+              <span class="avatar" aria-hidden="true">RS</span>
+              <span class="conversation__body">
+                <span class="conversation__top">
+                  <span class="conversation__name">Rahul Sharma</span>
+                  <span class="conversation__time">10:42 AM</span>
+                </span>
+                <span class="conversation__role">Full Stack Web Developer</span>
+                <span class="conversation__bottom">
+                  <span class="conversation__preview">Sure, I can help with that...</span>
+                  <span class="conversation__unread" aria-label="2 unread messages">2</span>
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li class="conversation">
+            <a class="conversation__item" href="#" data-customer-id="1" data-freelancer-id="102">
+              <span class="avatar avatar--violet" aria-hidden="true">AP</span>
+              <span class="conversation__body">
+                <span class="conversation__top">
+                  <span class="conversation__name">Ananya Patel</span>
+                  <span class="conversation__time">Yesterday</span>
+                </span>
+                <span class="conversation__role">UI/UX Designer</span>
+                <span class="conversation__bottom">
+                  <span class="conversation__preview">I have shared the updated design.</span>
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li class="conversation">
+            <a class="conversation__item" href="#" data-customer-id="1" data-freelancer-id="103">
+              <span class="avatar avatar--cyan" aria-hidden="true">AM</span>
+              <span class="conversation__body">
+                <span class="conversation__top">
+                  <span class="conversation__name">Arjun Mehta</span>
+                  <span class="conversation__time">Yesterday</span>
+                </span>
+                <span class="conversation__role">Python Developer</span>
+                <span class="conversation__bottom">
+                  <span class="conversation__preview">Thank you for the project details.</span>
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li class="conversation">
+            <a class="conversation__item" href="#" data-customer-id="1" data-freelancer-id="104">
+              <span class="avatar" aria-hidden="true">PS</span>
+              <span class="conversation__body">
+                <span class="conversation__top">
+                  <span class="conversation__name">Priya Shah</span>
+                  <span class="conversation__time">Monday</span>
+                </span>
+                <span class="conversation__role">Mobile App Developer</span>
+                <span class="conversation__bottom">
+                  <span class="conversation__preview">I can discuss the requirements...</span>
+                </span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- ----- Active conversation ----- -->
+      <section class="chat" aria-label="Conversation with Rahul Sharma" data-customer-id="1" data-freelancer-id="101">
+
+        <div class="chat__header">
+          <span class="avatar avatar--lg" aria-hidden="true">RS</span>
+          <div class="chat__person">
+            <h2 class="chat__name">Rahul Sharma</h2>
+            <p class="chat__role">Full Stack Web Developer</p>
+            <p class="chat__status">
+              <span class="chat__availability"><span aria-hidden="true">🟢</span> Available</span>
+              <span>Typically replies within a few hours</span>
+            </p>
+          </div>
+          <a class="chat__profile-btn" href="freelancer-profile.html">View Profile</a>
+        </div>
+
+        <div class="chat__messages" role="log" aria-live="polite" aria-label="Message history">
+
+          <p class="chat__date">Today · October 2</p>
+
+          <article class="message message--outgoing" data-message-id="1" data-sender-type="Customer">
+            <p class="message__bubble">Hi Rahul, I’m looking for a full-stack web application for a small business. I’d like to discuss the requirements.</p>
+            <p class="message__meta"><time datetime="2026-10-02T10:32">10:32 AM</time><span class="message__status message__status--read">✓✓ Read</span></p>
+          </article>
+
+          <article class="message message--incoming" data-message-id="2" data-sender-type="Freelancer">
+            <p class="message__bubble">Hi! Sure, I’d be happy to discuss the project. Could you share the main features you need?</p>
+            <p class="message__meta"><time datetime="2026-10-02T10:34">10:34 AM</time></p>
+          </article>
+
+          <article class="message message--outgoing" data-message-id="3" data-sender-type="Customer">
+            <p class="message__bubble">The application will need user authentication, a dashboard, and a database-backed search system.</p>
+            <p class="message__meta"><time datetime="2026-10-02T10:36">10:36 AM</time><span class="message__status message__status--read">✓✓ Read</span></p>
+          </article>
+
+          <article class="message message--incoming" data-message-id="4" data-sender-type="Freelancer">
+            <p class="message__bubble">That sounds good. I can help with the frontend, backend API and database integration.</p>
+            <p class="message__meta"><time datetime="2026-10-02T10:38">10:38 AM</time></p>
+          </article>
+
+          <article class="message message--outgoing" data-message-id="5" data-sender-type="Customer">
+            <p class="message__bubble">Great. What technologies would you recommend?</p>
+            <p class="message__meta"><time datetime="2026-10-02T10:40">10:40 AM</time><span class="message__status">✓ Sent</span></p>
+          </article>
+
+          <article class="message message--incoming" data-message-id="6" data-sender-type="Freelancer">
+            <p class="message__bubble">For this type of application, I would suggest a modern frontend with a Node.js backend and MySQL database.</p>
+            <p class="message__meta"><time datetime="2026-10-02T10:42">10:42 AM</time></p>
+          </article>
+
+        </div>
+
+        <form class="message-composer">
+          <button class="message-composer__attach" type="button" aria-label="Attach a file">📎</button>
+          <label class="message-composer__label" for="message-input" hidden>Type a message</label>
+          <input class="message-composer__input" id="message-input" type="text" name="MessageText" maxlength="1000" placeholder="Type a message..." autocomplete="off">
+          <button class="message-composer__send" type="button">Send</button>
+        </form>
+      </section>
+
+      <!-- ----- Empty state (hidden by default; show when no conversation is selected) ----- -->
+      <section class="chat-empty" aria-label="No conversation selected" hidden>
+        <div class="chat-empty__icon" aria-hidden="true">💬</div>
+        <h2 class="chat-empty__title">No conversation selected</h2>
+        <p class="chat-empty__text">Select a conversation to start messaging.</p>
+      </section>
+
+    </section>
+  </main>
+
+</body>
+</html>
